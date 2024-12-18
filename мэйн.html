@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ты еблан❤️</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            font-family: Arial, sans-serif;
+        }
+
+        .box {
+            border: 5px solid white;
+            border-radius: 15px;
+            padding: 20px 40px;
+            background-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: white;
+            margin: 0;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes borderAnimation {
+            0% {
+                border-color: #6a11cb;
+            }
+            50% {
+                border-color: #2575fc;
+            }
+            100% {
+                border-color: #6a11cb;
+            }
+        }
+
+        .box {
+            animation: fadeIn 2s ease-in-out, borderAnimation 3s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div id="content" class="box">
+        <h1>Ты еблан❤️</h1>
+    </div>
+
+    <script>
+        const box = document.getElementById("content");
+
+        setTimeout(() => {
+            box.style.transform = "scale(1.1) rotate(3deg)";
+            box.style.transition = "transform 0.5s ease-in-out";
+        }, 2000);
+
+        setTimeout(() => {
+            box.style.transform = "scale(1) rotate(-3deg)";
+        }, 2500);
+
+        setTimeout(() => {
+            box.style.transform = "scale(1) rotate(0)";
+        }, 3000);
+    </script>
+</body>
+</html>
